@@ -5,7 +5,6 @@ import { Alarm } from './components/Alarm.tsx';
 import { FallingFlowers } from './components/FallingFlowers.tsx';
 import { STATIONS } from './config/stations';
 import { useAudio } from './hooks/useAudio';
-import { Radio as RadioIcon } from 'lucide-react';
 
 const TARGET_DATE = '2026-10-10T04:00:00';
 
