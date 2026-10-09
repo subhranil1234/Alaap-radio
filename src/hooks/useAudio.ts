@@ -75,8 +75,12 @@ export function useAudio(initialVolume: number = 50) {
 
     setCurrentStation(station);
 
+    // Explicitly stop and clear the previous stream to prevent audio overlap
+    audio.pause();
+    audio.removeAttribute('src');
+    audio.load();
+
     if (!station.streamUrl) {
-      audio.pause();
       setState(s => ({ ...s, isPlaying: false, isBuffering: false, error: 'Direct stream unsupported', statusText: 'UNSUPPORTED' }));
       return;
     }
@@ -123,10 +127,8 @@ export function useAudio(initialVolume: number = 50) {
         }
       });
     } else {
-      if (audio.src !== station.streamUrl) {
-        audio.src = station.streamUrl;
-        audio.load();
-      }
+      audio.src = station.streamUrl;
+      audio.load();
       
       audio.play().catch((e) => {
         setState(s => ({ ...s, isPlaying: false, isBuffering: false, error: 'Playback blocked', statusText: 'BLOCKED' }));

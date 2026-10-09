@@ -15,7 +15,7 @@ export const STATIONS: Station[] = [
     name: 'MAHALAYA SPECIAL',
     subtitle: 'AKASHVANI BANGLA',
     frequency: 'LIVE',
-    streamUrl: 'https://air.pc.cdn.bitgravity.com/air/live/pbaudio001/playlist.m3u8',
+    streamUrl: 'https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio245/hlspbaudio24564kbps.m3u8',
     fallbackUrl: 'https://akashvani.gov.in/radio/live.php?channel=265',
     type: 'live',
     status: 'tested'
@@ -85,7 +85,7 @@ export const STATIONS: Station[] = [
     name: '94.8 FM',
     subtitle: 'Radio Channel',
     frequency: '94.8 MHz',
-    streamUrl: 'https://drive.uber.radio/uber/bollywoodnow/icecast.audio',
+    streamUrl: 'http://strm112.1.fm/bombaybeats_mobile_mp3',
     fallbackUrl: 'https://zeno.fm/',
     type: 'live',
     status: 'tested'
